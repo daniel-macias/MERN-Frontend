@@ -53,60 +53,60 @@ const RegisterScreen = ({ history }) => {
   return (
     <div className="register-screen">
       <form onSubmit={registerHandler} className="register-screen__form">
-        <h3 className="register-screen__title">Register</h3>
+        <h3 className="register-screen__title">Crear una cuenta</h3>
         {error && <span className="error-message">{error}</span>}
         <div className="form-group">
-          <label htmlFor="name">Username:</label>
+          <label htmlFor="name">Usuario:</label>
           <input
             type="text"
             required
             id="name"
-            placeholder="Enter username"
+            placeholder="Nombre de usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Correo:</label>
           <input
             type="email"
             required
             id="email"
-            placeholder="Email address"
+            placeholder="Correo"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Contraseña:</label>
           <input
             type="password"
             required
             id="password"
             autoComplete="true"
-            placeholder="Enter password"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirmpassword">Confirm Password:</label>
+          <label htmlFor="confirmpassword">Confirmar Contraseña:</label>
           <input
             type="password"
             required
             id="confirmpassword"
             autoComplete="true"
-            placeholder="Confirm password"
+            placeholder="Confirmar contraseña"
             value={confirmpassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Register
+          Registrar Cuenta
         </button>
 
         <span className="register-screen__subtext">
-          Already have an account? <Link to="/login">Login</Link>
+          ¿Ya tienes una cuenta? <Link to="/login">Ingresa</Link>
         </span>
       </form>
     </div>
